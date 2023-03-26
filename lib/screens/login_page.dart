@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tiny_care/components/my_button.dart';
 import 'package:tiny_care/components/my_textfield.dart';
+import 'package:tiny_care/components/square_tile.dart';
 import '../widgets/background_image.dart';
 
 class Root extends StatefulWidget {
@@ -30,6 +31,12 @@ class _RootState extends State<Root> {
         const Scaffold(
              backgroundColor: Colors.transparent,
         ),
+
+
+
+
+
+        //card widget
         Center(
           child: Container(
             width: 500,
@@ -157,6 +164,21 @@ class _RootState extends State<Root> {
                       ),
                     ),
 
+                    const SizedBox(height: 15,),
+
+                    //google and Apple button
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+
+                      //google
+                      SquareTile(imagePath: 'assets/images/google.png',),
+                      SizedBox(width: 15,),
+                      //apple
+                      SquareTile(imagePath: 'assets/images/apple.png',),
+                    ],
+                  ),
                   ],
                 ),
               ),
