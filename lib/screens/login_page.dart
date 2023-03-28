@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tiny_care/components/my_button.dart';
 import 'package:tiny_care/components/my_textfield.dart';
 import 'package:tiny_care/components/square_tile.dart';
+import 'package:tiny_care/screens/register_page.dart';
 import '../widgets/background_image.dart';
 
 class Root extends StatefulWidget {
@@ -139,7 +140,12 @@ class _RootState extends State<Root> {
                                       style: TextButton.styleFrom(
                                         textStyle: const TextStyle(fontSize: 13),
                                       ),
-                                      onPressed: () {},
+                                      onPressed: () => {
+                                      Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const RegisterPage()),
+                                      )
+                                      },
                                       child: const Text(
                                         'Create New Account',
                                         style: TextStyle(color: Colors.black),

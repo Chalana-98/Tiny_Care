@@ -20,7 +20,7 @@ class _MyButtonState extends State<MyButton> {
         margin: EdgeInsets.symmetric(horizontal: 80),
         decoration: BoxDecoration(color: Colors.indigo,
         borderRadius: BorderRadius.circular(20)),
-        child: Center(
+        child: const Center(
 
          child: Text('Sign In',
          style: TextStyle(color: Colors.black,
