@@ -166,22 +166,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               //   onTap: () {},
                               // ),
                               //
-                              Container(
-                                padding: EdgeInsets.all(3),
-                                margin: EdgeInsets.symmetric(horizontal: 1),
-                                decoration: BoxDecoration(color: Colors.indigo,
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: TextButton(
-                                  style: TextButton.styleFrom(
-                                    textStyle: const TextStyle(fontSize: 13),
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text(
-                                    'Sign Up',
-                                    style: TextStyle(color: Colors.black),
-                                  ),
-                                ),
-                              ),
+                            MyButton(onTap: (){}, text: "Sign Up"),
 
 
 

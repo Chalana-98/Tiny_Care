@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 class MyButton extends StatefulWidget {
 
-   MyButton({Key? key, required this.onTap}) : super(key: key);
+   MyButton({Key? key, required this.onTap, required this.text}) : super(key: key);
 
   final Function()? onTap;
+  final String text ;
 
   @override
   State<MyButton> createState() => _MyButtonState();
@@ -16,14 +17,14 @@ class _MyButtonState extends State<MyButton> {
     return  GestureDetector(
       onTap: widget.onTap,
       child: Container(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         margin: EdgeInsets.symmetric(horizontal: 80),
         decoration: BoxDecoration(color: Colors.indigo,
         borderRadius: BorderRadius.circular(20)),
-        child: const Center(
+        child: Center(
 
-         child: Text('Sign In',
-         style: TextStyle(color: Colors.black,
+         child: Text(widget.text,
+         style: const TextStyle(color: Colors.black,
          fontSize: 20,
          fontWeight: FontWeight.bold),),
 

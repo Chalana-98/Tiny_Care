@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tiny_care/components/my_button.dart';
 import 'package:tiny_care/components/my_textfield.dart';
 import 'package:tiny_care/components/square_tile.dart';
+import 'package:tiny_care/screens/home_page.dart';
 import 'package:tiny_care/screens/register_page.dart';
 import '../widgets/background_image.dart';
 
@@ -84,7 +85,7 @@ class _RootState extends State<Root> {
                             //User name
                             MyTextField(
                               controller: usernameController,
-                              hintText: 'UserName',
+                              hintText: 'User name',
                               obscureText: false,
                             ),
 
@@ -104,7 +105,13 @@ class _RootState extends State<Root> {
                               height: 10,
                             ),
                             MyButton(
-                              onTap: () {},
+                              text: 'Sign In',
+                                onTap: () => {
+                                      Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const HomePage()),
+                                      )
+                                      },
                             ),
 
                             const SizedBox(
@@ -161,10 +168,10 @@ class _RootState extends State<Root> {
                               height: 4,
                             ),
 
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 15),
+                            const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 15),
                               child: Row(
-                                children: const [
+                                children: [
                                   Expanded(
                                     child: Divider(
                                       thickness: 0.5,
@@ -194,9 +201,9 @@ class _RootState extends State<Root> {
 
                             //google and Apple button
 
-                            Row(
+                            const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
+                              children: [
                                 //google
                                 SquareTile(
                                   imagePath: 'assets/images/google.png',
