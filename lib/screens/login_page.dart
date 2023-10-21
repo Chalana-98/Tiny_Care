@@ -60,7 +60,9 @@ class _RootState extends State<Root> {
                             topLeft: Radius.circular(20),
                             bottomLeft: Radius.circular(20),
                             topRight: Radius.circular(20),
-                            bottomRight: Radius.circular(20))),
+                            bottomRight: Radius.circular(20)
+                            )
+                            ),
                      margin: const EdgeInsets.fromLTRB(40, 140, 40,20),
                     child: Scaffold(
 
